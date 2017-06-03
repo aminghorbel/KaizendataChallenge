@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane id="AnchorPane" fx:id="mainAnchor" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: FFF;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kaizendata.tec.project.FXMLController">
+   <children>
+      <StackPane fx:id="stackPane" prefHeight="976.0" prefWidth="1536.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane fx:id="mainPane" prefHeight="200.0" prefWidth="200.0" StackPane.alignment="CENTER">
+                
+                
+                
+                
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+               <children>
+                  <Pane layoutX="44.0" layoutY="517.0" prefHeight="177.0" prefWidth="337.0">
+                     <children>
+                        <JFXTextField fx:id="orderDescriptionTF" labelFloat="true" layoutY="64.0" maxWidth="330.0" prefHeight="10.0" prefWidth="330.0" promptText="description" />
+                        <JFXButton fx:id="cancelButtonOrder" buttonType="RAISED" cancelButton="true" layoutX="29.0" layoutY="123.0" onAction="#cancelEditOrder" prefHeight="40.0" prefWidth="127.0" ripplerFill="BLACK" style="-fx-background-color: #FFF;" text="annuler" visible="false" />
+                        <JFXButton fx:id="addUpdateOrderB" buttonType="RAISED" layoutX="179.0" layoutY="123.0" onAction="#addUpdateOrder" prefHeight="40.0" prefWidth="127.0" ripplerFill="BLACK" style="-fx-background-color: white;" text="add" />
+                        <Label text="Related to order" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="44.0" layoutY="192.0" prefHeight="214.0" prefWidth="337.0">
+                     <children>
+                        <JFXTextField fx:id="clientFullNameTF" labelFloat="true" layoutY="64.0" maxWidth="330.0" prefHeight="10.0" prefWidth="330.0" promptText="full name" />
+                        <JFXButton fx:id="cancelButton" buttonType="RAISED" cancelButton="true" layoutX="29.0" layoutY="123.0" onAction="#cancelEdit" prefHeight="40.0" prefWidth="127.0" ripplerFill="BLACK" style="-fx-background-color: #FFF;" text="annuler" visible="false" />
+                        <JFXButton fx:id="addUpdateClient" buttonType="RAISED" layoutX="179.0" layoutY="123.0" onAction="#addUpdateClient" prefHeight="40.0" prefWidth="127.0" ripplerFill="BLACK" style="-fx-background-color: white;" text="add" />
+                        <Label text="Related to client" />
+                     </children>
+                  </Pane>
+                  <VBox fx:id="clientsContiener" accessibleRole="NODE" layoutX="1563.0" layoutY="151.0" onScroll="#moveUpDown" spacing="10.0" />
+                  <VBox fx:id="orderContiener" accessibleRole="NODE" layoutX="1000.0" layoutY="151.0" onScroll="#moveUpDownOrder" spacing="10.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="83.0" layoutY="997.0" stroke="WHITE" strokeType="INSIDE" width="1920.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="136.0" stroke="WHITE" strokeType="INSIDE" width="1920.0" />
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+      <Pane fx:id="paneProductSelection" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: FFF;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="83.0" stroke="WHITE" strokeType="INSIDE" width="1920.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="136.0" layoutY="944.0" stroke="WHITE" strokeType="INSIDE" width="1920.0" />
+            <Label layoutX="203.0" layoutY="310.0" text="Selected product" />
+            <JFXButton fx:id="returnHomeProduct" buttonType="RAISED" layoutX="203.0" layoutY="388.0" onAction="#returnHome" prefHeight="31.0" prefWidth="115.0" style="-fx-background-color: FFF;" text="return" />
+            <Label fx:id="productNameLabel" layoutX="208.0" layoutY="341.0" text="product name" />
+            <Label layoutX="1546.0" layoutY="105.0" text="associeted client" />
+            <Label layoutX="1000.0" layoutY="105.0" text="not associeted client" />
+            <VBox fx:id="associetedClientVB" accessibleRole="NODE" layoutX="1563.0" layoutY="151.0" onScroll="#moveUpDown" spacing="10.0" />
+            <VBox fx:id="notAssocietedClientVB" accessibleRole="NODE" layoutX="1000.0" layoutY="151.0" onScroll="#moveUpDownOrder" spacing="10.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="paneClientSelection" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: FFF;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="83.0" stroke="WHITE" strokeType="INSIDE" width="1920.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="136.0" layoutY="944.0" stroke="WHITE" strokeType="INSIDE" width="1920.0" />
+            <Label layoutX="203.0" layoutY="310.0" text="Selected client" />
+            <JFXButton fx:id="returnHomeClient" buttonType="RAISED" layoutX="203.0" layoutY="388.0" onAction="#returnHome" prefHeight="31.0" prefWidth="115.0" style="-fx-background-color: FFF;" text="return" />
+            <Label fx:id="clientNameLabel" layoutX="208.0" layoutY="341.0" text="client name" />
+            <Label layoutX="1546.0" layoutY="105.0" text="associeted order" />
+            <Label layoutX="1000.0" layoutY="105.0" text="not associeted order" />
+            <VBox fx:id="associetedOrderVB" accessibleRole="NODE" layoutX="1563.0" layoutY="151.0" onScroll="#moveUpDown" spacing="10.0" />
+            <VBox fx:id="notAssocietedOrderVB1" accessibleRole="NODE" layoutX="1000.0" layoutY="151.0" onScroll="#moveUpDownOrder" spacing="10.0" />
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
