@@ -66,9 +66,9 @@ public class FXMLController implements Initializable {
     private VBox orderContiener;
     private Order selectedOrder;
     @FXML
-    private Pane paneProductSelection;
+    private Pane paneOrderSelection;
     @FXML
-    private JFXButton returnHomeProduct;
+    private JFXButton returnHomeOrder;
     @FXML
     private VBox associetedClientVB;
     @FXML
@@ -225,7 +225,7 @@ public class FXMLController implements Initializable {
                 loadNotassocietedOrderVB();
 
             } else {
-                paneProductSelection.setVisible(true);
+                paneOrderSelection.setVisible(true);
                 selectedOrder = (Order) object;
                 productNameLabel.setText(selectedOrder.getDescription());
                 loadAssocietedClientVB();
@@ -398,7 +398,7 @@ public class FXMLController implements Initializable {
      */
     @FXML
     private void returnHome(ActionEvent event) {
-        paneProductSelection.setVisible(false);
+        paneOrderSelection.setVisible(false);
         paneClientSelection.setVisible(false);
 
     }
@@ -476,7 +476,7 @@ public class FXMLController implements Initializable {
 
         popup.setPopupContent(new VBox(remove));
 
-        popup.show(paneProductSelection, JFXPopup.PopupVPosition.TOP, JFXPopup.PopupHPosition.LEFT, x, y);
+        popup.show(paneOrderSelection, JFXPopup.PopupVPosition.TOP, JFXPopup.PopupHPosition.LEFT, x, y);
     }
 
     private void initPopupForAddItem(Object object, double x, double y) {
@@ -503,7 +503,7 @@ public class FXMLController implements Initializable {
 
         popup.setPopupContent(new VBox(add));
 
-        popup.show(paneProductSelection, JFXPopup.PopupVPosition.TOP, JFXPopup.PopupHPosition.LEFT, x, y);
+        popup.show(paneOrderSelection, JFXPopup.PopupVPosition.TOP, JFXPopup.PopupHPosition.LEFT, x, y);
     }
 
     /**

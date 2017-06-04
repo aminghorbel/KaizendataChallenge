@@ -47,12 +47,12 @@
             </Pane>
          </children>
       </StackPane>
-      <Pane fx:id="paneProductSelection" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: FFF;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane fx:id="paneOrderSelection" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: FFF;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="83.0" stroke="WHITE" strokeType="INSIDE" width="1920.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="136.0" layoutY="944.0" stroke="WHITE" strokeType="INSIDE" width="1920.0" />
             <Label layoutX="203.0" layoutY="310.0" text="Selected product" />
-            <JFXButton fx:id="returnHomeProduct" buttonType="RAISED" layoutX="203.0" layoutY="388.0" onAction="#returnHome" prefHeight="31.0" prefWidth="115.0" style="-fx-background-color: FFF;" text="return" />
+            <JFXButton fx:id="returnHomeOrder" buttonType="RAISED" layoutX="203.0" layoutY="388.0" onAction="#returnHome" prefHeight="31.0" prefWidth="115.0" style="-fx-background-color: FFF;" text="return" />
             <Label fx:id="productNameLabel" layoutX="208.0" layoutY="341.0" text="product name" />
             <Label layoutX="1546.0" layoutY="105.0" text="associeted client" />
             <Label layoutX="1000.0" layoutY="105.0" text="not associeted client" />
